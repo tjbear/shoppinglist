@@ -1,4 +1,225 @@
+/********************
+#GLOBAL
+********************/
+
+/* Flexible viewport fix for IE10 */
+@viewport {
+    zoom: 1.0;
+    width: extend-to-zoom;
+}
+
+@-ms-viewport {
+    width: extend-to-zoom;
+    zoom: 1.0;
+}
+
+* { box-sizing: border-box; }
+
 body,
 input {
     font-family: 'Poppins', sans-serif;
 }
+
+body {
+    background-color: #D2D7D3;
+}
+
+/********************
+#HEADER & #FOOTER
+********************/
+
+header {
+    padding-top: 1em;
+}
+
+header,
+footer {
+    background-color: #95A5A6;
+}
+
+.logo {
+    width: 75px;
+    height: 75px;
+    background-color: #DADFE1;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 75px;
+    border-radius: 50%;
+}
+
+.logo > i {
+    margin-top: 15px;
+}
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    padding: .5rem 0 .5rem 0;
+}
+
+footer {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: .5em 0 .5em 0;
+}
+
+a,
+a:visited,
+a:active {
+    color: rgb(58, 83, 155);
+}
+
+a:hover {
+    color: rgba(58, 83, 155, .7);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************
+#MAIN
+********************/
+
+input,
+button {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+input {
+    width: 75%;
+}
+
+input[type=text] {
+    padding-left: 0.313em;
+}
+
+button[name="submit"] {
+    width: 25%;
+    background-color: rgba(206, 222, 72, .7);
+    float: right;
+}
+
+button i { color: rgba(0, 0, 0, .7); }
+
+input,
+button[name="submit"] {
+    padding: 0.313em 0 0.313em 0;
+}
+
+main {
+    background-color:  #DADFE1;
+    padding: 2em 0 2em 0;
+}
+
+.input-area,
+.list-area {
+    margin: 0 .5em 0 .5em;
+    max-width: 320px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    margin: 1em 0 1em 0;
+    height: 36px;
+}
+
+.list-item { 
+    background-color: #fff;
+    margin: 0;
+    height: 36px;
+    width: 62.5%;
+    line-height: 36px;
+    padding-left: 0.313em;
+}
+
+.box {
+    background-color: #fff;
+    width: 12.5%;
+    height: 36px;
+    border: 6px solid #E9EFBA;
+}
+
+.box:hover {
+    cursor: pointer;
+}
+
+.btn {
+    padding: 0.313em 0 0.313em 0;
+    width: 12.5%;
+    height: 36px;
+}
+
+i[class="fa fa-check"] {
+    color: #fff;
+    padding-left: 5px;
+}
+
+.box,
+.list-item,
+.btn {
+    float: left;
+}
+
+.reorder {
+    background-color: rgba(217, 175, 93, .7);
+}
+
+.delete {
+    background-color: rgba(144, 36, 36, .7);
+}
+
+/*** Button Hover & Click States ***/
+
+button[name="submit"] i:hover {
+    color: rgb(0, 0, 0);
+}
+
+button[name="submit"]:active,
+button[name="submit"]:focus {
+    background-color: rgb(206, 222, 72);
+}
+
+.reorder i:hover {
+    color: rgb(0, 0, 0);
+}
+
+.reorder:active,
+.reorder:focus { background-color: rgb(217, 175, 93); }
+
+.delete i:hover {
+    color: rgb(0, 0, 0);
+}
+
+.delete:active,
+.delete:focus { background-color: rgb(144, 36, 36); }
+
+i[class="fa fa-check"]:hover { color: rgba(0, 0, 0, .5); }
+
+i[class="fa fa-check"]:active,
+i[class="fa fa-check"]:focus { color: rgb(0, 0, 0); }
+
+/*
+main p { text-decoration: line-through; }
+/*

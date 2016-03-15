@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1">
     <title>Shopping List</title>
     <link href='https://fonts.googleapis.com/css?family=Poppins:400,600' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -16,30 +18,71 @@
             <h1>Shopping List</h1>
         </header>
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         <main>
-            <input type="text" name="add-item" placeholder="Add Item">
-            <button name="submit"><i class="fa fa-plus"></i></button>
-            <ul>
+           <div class="input-area">
+                <input type="text" name="add-item" placeholder="Add Item">
+                <button name="submit"><i class="fa fa-plus"></i></button>
+           </div>
+
+            
+            <ul class="list-area">
                 <li>
                     <div class="box"><i class="fa fa-check"></i></div>
-                    <span>Milk</span>
-                    <button><i class="fa fa-bars"></i></button>
-                    <button><i class="fa fa-times"></i></button>
+                    <p class="list-item">Milk</p>
+                    <button class="btn reorder"><i class="fa fa-bars"></i></button>
+                    <button class="btn delete"><i class="fa fa-times"></i></button>
                 </li>
                 <li>
                     <div class="box"><i class="fa fa-check"></i></div>
-                    <span>Bread</span>
-                    <button><i class="fa fa-bars"></i></button>
-                    <button><i class="fa fa-times"></i></button>
+                    <p class="list-item">Bread</p>
+                    <button class="btn reorder"><i class="fa fa-bars"></i></button>
+                    <button class="btn delete"><i class="fa fa-times"></i></button>
                 </li>
             </ul>
         </main>
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         <footer>
-            <p class="copyright">TJ Bear 2016</p>
+            <p class="copyright"><a href="http://tjbear.github.io">TJ Bear</a> 2016</p>
         </footer>
     </div>
-    
     <script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
     <script src="js/app.js"></script>
 </body>
