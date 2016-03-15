@@ -222,4 +222,9 @@ i[class="fa fa-check"]:focus { color: rgb(0, 0, 0); }
 
 /*
 main p { text-decoration: line-through; }
-/*
+*/
+
+@media only screen and (min-width: 320px) {
+    .input-area,
+    .list-area { margin: 0 auto; }
+}
