@@ -116,7 +116,8 @@ button[name="submit"] {
     float: right;
 }
 
-button i { color: rgba(0, 0, 0, .7); }
+button i,
+div i { color: rgba(0, 0, 0, .7); }
 
 input,
 button[name="submit"] {
@@ -172,6 +173,10 @@ li {
 }
 
 i[class="fa fa-check"] { display: none; }
+i[class="fa fa-bars"] {
+    padding-left: 13px;
+    padding-top: 5px;
+}
 
 .box,
 .list-item,
@@ -181,6 +186,7 @@ i[class="fa fa-check"] { display: none; }
 
 .reorder {
     background-color: rgba(217, 175, 93, .7);
+    cursor: pointer;
 }
 
 .delete {
