@@ -24,6 +24,10 @@ body {
     background-color: #D2D7D3;
 }
 
+
+
+
+
 /********************
 #HEADER & #FOOTER
 ********************/
@@ -49,6 +53,8 @@ footer {
     margin-top: 15px;
 }
 
+.logo i  {color: rgb(0, 0, 0); }
+
 h1 {
     text-transform: uppercase;
     text-align: center;
@@ -63,27 +69,15 @@ footer {
     padding: .5em 0 .5em 0;
 }
 
-a,
-a:visited,
-a:active {
+footer a,
+footer a:visited,
+footer a:active {
     color: rgb(58, 83, 155);
 }
 
-a:hover {
+footer a:hover {
     color: rgba(58, 83, 155, .7);
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -92,6 +86,8 @@ a:hover {
 /********************
 #MAIN
 ********************/
+
+/*** Initial State ***/
 
 input,
 button {
@@ -116,8 +112,6 @@ input[type=text] {
 
 button i,
 div i { color: rgba(0, 0, 0, .7); }
-
-.logo i  {color: rgb(0, 0, 0); }
 
 input,
 button[name="submit"] {
@@ -162,10 +156,6 @@ li {
     border: 6px solid rgb(108, 122, 137);
 }
 
-.box:hover {
-    cursor: pointer;
-}
-
 .btn {
     padding: 0.313em 0 0.313em 0;
     width: 12.5%;
@@ -184,14 +174,11 @@ i[class="fa fa-bars"] {
     float: left;
 }
 
-.reorder {
-    background-color: rgba(235, 151, 78, .7);
-    cursor: pointer;
-}
+.reorder { background-color: rgba(235, 151, 78, .7); }
 
-.delete {
-    background-color: rgba(217, 30, 24, .7);
-}
+.delete { background-color: rgba(217, 30, 24, .7); }
+
+/*** Interaction States ***/
 
 button:active,
 button:focus {
@@ -201,28 +188,11 @@ button:focus {
             box-shadow: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.reorder,
+.box:hover { cursor: pointer; }
 
 .done { text-decoration: line-through; }
+
 .checked { 
     display: inline; 
     padding-left: 6px;
@@ -235,55 +205,27 @@ button:focus {
     color: rgba(0, 0, 0, .3);
 }
 
-
-
-
-/*** Button Hover & Click States
-
-button[name="submit"] i:hover {
-    color: rgb(0, 0, 0);
-}
-
-button[name="submit"]:active,
-button[name="submit"]:focus {
-    background-color: rgb(206, 222, 72);
-}
-
-.reorder i:hover {
-    color: rgb(0, 0, 0);
-}
-
-.reorder:active,
-.reorder:focus { background-color: rgb(217, 175, 93); }
-
-.delete i:hover {
-    color: rgb(0, 0, 0);
-}
-
-
-.delete:active,
-.delete:focus { background-color: rgb(144, 36, 36); }
-
-i[class="fa fa-check"]:hover { color: rgba(0, 0, 0, .5); }
-
-i[class="fa fa-check"]:active,
-i[class="fa fa-check"]:focus { color: rgb(0, 0, 0); }
-
-/*
-main p { text-decoration: line-through; }
-*/
-
-@media only screen and (min-width: 320px) {
-    .input-area,
-    .list-area { margin: 0 auto; }
-    
-    .input-area { margin-bottom: 2em; }
-}
-
 .error {
     width: 320px;
     margin: 0 auto;
     text-align: center;
     margin-top: -15px;
     display: none;
+}
+
+
+
+
+
+/********************
+#MEDIA-QUERIES
+********************/
+
+@media only screen and (min-width: 320px) {
+    
+    .input-area,
+    .list-area { margin: 0 auto; }
+    
+    .input-area { margin-bottom: 2em; }
+    
 }

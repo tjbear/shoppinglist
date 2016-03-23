@@ -1,6 +1,9 @@
 $(document).ready(function() {
+    
     // Put focus on input box on load
     $('input').val("").focus();
+    
+    
     
     // Add item entered into text input to list when user clicks green button
     $('.add-item').click(function() {
@@ -25,16 +28,24 @@ $(document).ready(function() {
         
     });
     
+    
+    
     // Remove list item when user clicks red button
     $('ul').on('click', '.delete', function(event) {
         $(this).closest('li').remove();
+        $('input').focus();
     });
+    
+    
     
     // Toggle check box and strikethrough text on box click
     $('ul').on('click', '.box', function(event) {
         $(this).children('i').toggleClass('checked');
         $(this).siblings('p').toggleClass('done');
+        $('input').focus();
     });
+    
+    
     
     // Re order list items on click
     $("ul").sortable({ disabled: true });
@@ -53,9 +64,9 @@ $(document).ready(function() {
         });
     });
     
-    // Hover States
     
-    // Add Item
+    
+    // Add Item Hover State
     $('.add-item').mouseenter(function() {
         $(this).css('background-color', 'rgb(46, 204, 113');
         $('i.fa-plus').css('color', 'rgb(0, 0, 0');
@@ -65,42 +76,48 @@ $(document).ready(function() {
         $('i.fa-plus').css('color', 'rgba(0, 0, 0, .7');
     });
     
-    // Delete Item
-    $('.delete').mouseenter(function() {
+    
+    
+    // Delete Item Hover State
+    $('ul').on('mouseenter', '.delete', function(event) {
         $(this).css('background-color', 'rgb(217, 30, 24)');
         $(this).children('i.fa-times').css('color', 'rgb(0, 0, 0');
-    })
-    .mouseleave(function() {
+    });
+    
+    $('ul').on('mouseleave', '.delete', function(event) {
         $(this).css('background-color', 'rgba(217, 30, 24, .7)');
         $(this).children('i.fa-times').css('color', 'rgba(0, 0, 0, .7');
     });
     
-    // Reorder Item
-    $('.reorder').mouseenter(function() {
+    
+    
+    // Reorder Item Hover State
+    $('ul').on('mouseenter', '.reorder', function(event) {
         $(this).css('background-color', 'rgb(235, 151, 78)');
         $(this).children('i.fa-bars').css('color', 'rgb(0, 0, 0');
-    })
-    .mouseleave(function() {
+    });
+    
+    $('ul').on('mouseleave', '.reorder', function(event) {
         $(this).css('background-color', 'rgba(235, 151, 78, .7)');
         $(this).children('i.fa-bars').css('color', 'rgba(0, 0, 0, .7');
     });
-    
-    // Box
 
+    
+
+    // Checkbox Hover State
     $('ul').on('mouseenter', '.box', function(event) {
-        $(this).children('i').toggleClass('checked-hover')
+        $(this).children('i').toggleClass('checked-hover');
     });
     
     $('ul').on('mouseleave', '.box', function(event) {
-        $(this).children('i').toggleClass('checked-hover')
+        $(this).children('i').toggleClass('checked-hover');
     });
-    
-    
-    
+        
 });
 
 // Add item entered into text input to list when user presses Enter
 $(document).keypress(function(e) {
+    
     if(e.which == 13) {
         // Show error code if input empty
         if( $('input').val().trim().length == 0 ) {
@@ -121,4 +138,5 @@ $(document).keypress(function(e) {
             
         };
     }
+    
 });
