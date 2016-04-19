@@ -18,7 +18,7 @@ $(document).ready(function() {
         
         else {
         
-            $('.list-area').prepend('<li><div class="box"><i class="fa fa-check"></i></div><p class="list-item">' + $('input').val() + '</p><div class="reorder btn"><i class="fa fa-bars"></i></div><button class="delete btn"><i class="fa fa-times"></i></button></li>');
+            $('.list-area').prepend('<li><div class="box"><i class="fa fa-check"></i></div><p class="list-item">' + $('input').val() + '</p><button class="delete btn"><i class="fa fa-times"></i></button></li>');
 
             $('input').val("").focus();
 
@@ -48,21 +48,7 @@ $(document).ready(function() {
     
     
     // Re order list items on click
-    $("ul").sortable({ disabled: true });
-
-    $("ul").on("mousedown", ".reorder", function() {
-        $("ul").sortable({
-            axis: "y",
-            disabled: false
-        });
-
-    });
-
-    $("ul").on("mouseup", function() {
-        $("ul").sortable({
-            disabled: true
-        });
-    });
+    $("ul").sortable({ axis: "y" });
     
     
     
@@ -87,30 +73,6 @@ $(document).ready(function() {
     $('ul').on('mouseleave', '.delete', function(event) {
         $(this).css('background-color', 'rgba(217, 30, 24, .7)');
         $(this).children('i.fa-times').css('color', 'rgba(0, 0, 0, .7');
-    });
-    
-    
-    
-    // Reorder Item Hover State
-    $('ul').on('mouseenter', '.reorder', function(event) {
-        $(this).css('background-color', 'rgb(235, 151, 78)');
-        $(this).children('i.fa-bars').css('color', 'rgb(0, 0, 0');
-    });
-    
-    $('ul').on('mouseleave', '.reorder', function(event) {
-        $(this).css('background-color', 'rgba(235, 151, 78, .7)');
-        $(this).children('i.fa-bars').css('color', 'rgba(0, 0, 0, .7');
-    });
-
-    
-
-    // Checkbox Hover State
-    $('ul').on('mouseenter', '.box', function(event) {
-        $(this).children('i').toggleClass('checked-hover');
-    });
-    
-    $('ul').on('mouseleave', '.box', function(event) {
-        $(this).children('i').toggleClass('checked-hover');
     });
         
 });

@@ -146,7 +146,7 @@ li {
     background-color: #fff;
     margin: 0;
     height: 36px;
-    width: 62.5%;
+    width: 75%;
     line-height: 36px;
     padding-left: 0.313em;
 }
@@ -176,8 +176,6 @@ i[class="fa fa-bars"] {
     float: left;
 }
 
-.reorder { background-color: rgba(235, 151, 78, .7); }
-
 .delete { background-color: rgba(217, 30, 24, .7); }
 
 /*** Interaction States ***/
@@ -190,7 +188,6 @@ button:focus {
             box-shadow: none;
 }
 
-.reorder,
 .box:hover { cursor: pointer; }
 
 .done { text-decoration: line-through; }
@@ -201,18 +198,19 @@ button:focus {
     color: rgb(0, 0, 0);
 }
 
-.checked-hover { 
-    display: inline; 
-    padding-left: 6px;
-    color: rgba(0, 0, 0, .3);
-}
-
 .error {
-    width: 320px;
+    width: 280px;
     margin: 0 auto;
     text-align: center;
     margin-top: -15px;
     display: none;
+}
+
+.msg {
+    width: 280px;
+    margin: 0 auto;
+    text-align: center;
+
 }
 
 
